@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Fruit Fit - Home</title>
+
+    <script src="key_detection.js"></script>
+
+    <!-- Fun, bubbly font -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Fredoka", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #fff4d1, #ffe0f2);
+            color: #333;
+        }
+
+        .app-container {
+            width: 90%;
+            max-width: 1000px;
+            background: #ffffffd9;
+            border-radius: 24px;
+            border: 3px solid #ffb347;
+            padding: 32px 24px 40px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .title {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            letter-spacing: 0.06em;
+            color: #f97316;
+            /* fruity orange */
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 32px;
+        }
+
+        .card-row {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .fruit-card {
+            width: 200px;
+            background: #fffdf8;
+            border-radius: 20px;
+            border: 2px solid #ffd38e;
+            text-align: center;
+            padding: 16px 12px 20px;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+        }
+
+        .fruit-card:hover,
+        .fruit-card:focus-visible {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+            border-color: #f97316;
+            outline: none;
+        }
+
+        .fruit-image {
+            width: 100%;
+            height: 140px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        .fruit-name {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .fruit-tagline {
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        @media (max-width: 600px) {
+            .title {
+                font-size: 2.2rem;
+            }
+
+            .fruit-card {
+                width: 160px;
+            }
+
+            .fruit-image {
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app-container">
+        <h1 class="title">Fruit Fit</h1>
+        <p class="subtitle">Tap a fruit buddy and copy their moves for a fun home workout!</p>
+
+        <div class="card-row">
+            <!-- ORANGE -->
+            <a class="fruit-card" id="orange" href="orange.html">
+                <img class="fruit-image" src="images/orange_wave.png" alt="Orange character waving" />
+                <div class="fruit-name">Orange</div>
+                <!-- <div class="fruit-tagline">Sunny Warm-Up Dance</div> -->
+            </a>
+
+            <!-- BANANA -->
+            <a class="fruit-card" id="banana" href="banana.html">
+                <img class="fruit-image" src="images/banana_wave.png" alt="Banana character waving" />
+                <div class="fruit-name">Banana</div>
+                <!-- <div class="fruit-tagline">Core Crunch Party</div> -->
+            </a>
+
+            <!-- STRAWBERRY -->
+            <a class="fruit-card" id="strawberry" href="strawberry.html">
+                <img class="fruit-image" src="images/strawberry_wave.png" alt="Strawberry character waving" />
+                <div class="fruit-name">Strawberry</div>
+                <!-- <div class="fruit-tagline">Cardio Berry Blast</div> -->
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
