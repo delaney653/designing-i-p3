@@ -6,24 +6,7 @@
     <title>Fruit Fit - Strawberry Workout</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
-    <script>
-        window.onload = () => {
-            document.body.tabIndex = 0;
-            document.body.focus();
-        };
-        document.addEventListener("keydown", function(event) {
-        if (event.key === "ArrowLeft") {
-            event.preventDefault();
-            // Trigger the button element with a click
-            document.getElementById("back-button").click();
-        }
-        if (event.key === "ArrowDown") {
-            // event.preventDefault();
-            // Trigger the button element with a click
-            document.getElementById("video").play();
-        }
-        }); 
-    </script>
+
     <style>
         * {
             box-sizing: border-box;
@@ -135,6 +118,21 @@
             color: #7a3a45;
         }
 
+        .keyboard-help {
+            margin-top: 12px;
+            padding: 10px 14px;
+            background: #ffe5eb;
+            border: 2px solid #f43f5e;
+            border-radius: 14px;
+            font-size: 0.92rem;
+            color: #7a3a45;
+            text-align: center;
+            line-height: 1.4;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+            user-select: none;
+        }
+
+
         @media (max-width: 600px) {
             .title-block h1 {
                 font-size: 1.7rem;
@@ -156,15 +154,15 @@
                 <p>Join Strawberry for a sweet cardio blast. Keep moving and have fun!</p>
             </div>
 
-            <a class="back-button" id="back-button" href="index.html">
+            <a class="back-button" href="index.html">
                 <span class="icon">←</span>
                 <span>Back to Fruit Fit</span>
             </a>
         </div>
 
         <div class="content">
-            <div class="video-wrapper" >
-                <video id="video" controls src="videos/strawberry.mp4">
+            <div class="video-wrapper">
+                <video id="workoutVideo" controls src="videos/strawberry.mov">
                     Your browser does not support the video tag.
                 </video>
             </div>
@@ -172,8 +170,17 @@
             <p class="hint">
                 Tip: Strawberry loves big energy! Try to bounce along and keep your heart rate up the whole time.
             </p>
+
+            <div class="keyboard-help">
+                ← / → jump between segments &nbsp;•&nbsp;
+                ↑ toggle 1.25x speed on/off &nbsp;•&nbsp;
+                ↓ toggle 0.75x speed on/off
+            </div>
         </div>
     </div>
+
+    <!-- External JS file -->
+    <script src="video-options.js"></script>
 </body>
 
 </html>
