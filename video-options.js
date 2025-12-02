@@ -61,6 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         e.preventDefault();
 
+
         if (key === "ArrowRight") {
             jumpSegment("next");
         } else if (key === "ArrowLeft") {
@@ -69,16 +70,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // speed toggle logic
         else if (key === "ArrowUp") {
-            if (video.playbackRate === 1.25) {
-                video.playbackRate = 1.0;
-            } else {
+            if (video.playbackRate == 0.75) {
+                video.playbackRate = 1;
+                document.getElementById('speed').innerText = "Current Speed: 1.0"
+            } else if (video.playbackRate == 1){
                 video.playbackRate = 1.25;
+                document.getElementById('speed').innerText = "Current Speed: 1.25"
             }
         } else if (key === "ArrowDown") {
-            if (video.playbackRate === 0.75) {
+            if (video.playbackRate === 1.25) {
                 video.playbackRate = 1.0;
-            } else {
+                document.getElementById('speed').innerText = "Current Speed: 1.0"
+            } else if (video.playbackRate === 1.0){
                 video.playbackRate = 0.75;
+                document.getElementById('speed').innerText = "Current Speed: 0.75"
             }
         }
     });

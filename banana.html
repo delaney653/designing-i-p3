@@ -40,7 +40,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
             gap: 12px;
         }
 
@@ -52,11 +52,12 @@
         }
 
         .title-block p {
-            font-size: 0.95rem;
+            font-size: 1.2rem;
             color: #666038;
         }
 
         .back-button {
+            margin-top: 12px;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
@@ -65,7 +66,7 @@
             border-radius: 999px;
             border: 2px solid #eab308;
             background: #fffce5;
-            font-size: 0.95rem;
+            font-size: 1.2rem;
             color: #854d0e;
             font-weight: 600;
             cursor: pointer;
@@ -82,7 +83,21 @@
         }
 
         .back-button span.icon {
-            font-size: 1.1rem;
+            font-size: 1.25rem;
+        }
+
+        .speed-display {
+            margin-top: 12px;
+            padding: 10px 14px;
+            background: #fff7c2;
+            border: 2px solid #eab308;
+            border-radius: 14px;
+            font-size: 1.2rem;
+            color: #854d0e;
+            text-align: center;
+            line-height: 1.4;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+            user-select: none;
         }
 
         .content {
@@ -105,7 +120,7 @@
 
         .hint {
             margin-top: 10px;
-            font-size: 0.95rem;
+            font-size: 1.2rem;
             color: #6b4b16;
         }
 
@@ -115,7 +130,7 @@
             background: #fff7c2;
             border: 2px solid #eab308;
             border-radius: 14px;
-            font-size: 0.92rem;
+            font-size: 1.2rem;
             color: #854d0e;
             text-align: center;
             line-height: 1.4;
@@ -144,16 +159,14 @@
                 <p>Follow Banana through a silly core-and-balance session. Stay bendy and have fun!</p>
             </div>
 
-            <a class="back-button" href="index.html">
-                <span class="icon">←</span>
-                <span>Back to Fruit Fit</span>
-            </a>
+            
+             <p class="speed-display" id="speed">Current Speed: 1.0 </p>
         </div>
 
         <div class="content">
             <div class="video-wrapper">
                 <!-- Local workout video -->
-                <video id="workoutVideo" controls src="videos/banana.mov">
+                <video id="workoutVideo" controls src="videos/banana.mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
@@ -165,10 +178,15 @@
 
             <div class="keyboard-help">
                 ← / → jump between segments &nbsp;•&nbsp;
-                ↑ toggle 1.25x speed on/off &nbsp;•&nbsp;
-                ↓ toggle 0.75x speed on/off
+                ↑ increase 0.25x speed &nbsp;•&nbsp;
+                ↓ decrease 0.25x speed
             </div>
         </div>
+
+        <a class="back-button" href="index.html">
+                <span class="icon">←</span>
+                <span>Back to Fruit Fit</span>
+            </a>
     </div>
     <!-- External JS file -->
     <script src="video-options.js"></script>
