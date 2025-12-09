@@ -1,14 +1,13 @@
-// video-options.js
-
 document.addEventListener("DOMContentLoaded", () => {
     const video = document.getElementById("workoutVideo");
     if (!video) return;
 
-    // 0-15 exercise 1
-    // 15-25 break
-    // 25-40 exercise 2
-    // 40-50 break
-    // 50-65 exercise 3
+    // Here's how I structured our videos:
+    // 0-15 s:  exercise 1
+    // 15-25 s:  break
+    // 25-40 s:  exercise 2
+    // 40-50 s:  break
+    // 50-65 s:  exercise 3
     const segments = [0, 15, 25, 40, 50, 65];
 
     function getCurrentSegmentIndex() {
@@ -73,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (video.playbackRate == 0.75) {
                 video.playbackRate = 1;
                 document.getElementById('speed').innerText = "Current Speed: 1.0"
-            } else if (video.playbackRate == 1){
+            } else if (video.playbackRate == 1) {
                 video.playbackRate = 1.25;
                 document.getElementById('speed').innerText = "Current Speed: 1.25"
             }
@@ -81,26 +80,22 @@ document.addEventListener("DOMContentLoaded", () => {
             if (video.playbackRate === 1.25) {
                 video.playbackRate = 1.0;
                 document.getElementById('speed').innerText = "Current Speed: 1.0"
-            } else if (video.playbackRate === 1.0){
+            } else if (video.playbackRate === 1.0) {
                 video.playbackRate = 0.75;
                 document.getElementById('speed').innerText = "Current Speed: 0.75"
             }
         }
 
         else if (key === "ArrowRight") {
-            // Trigger the button element with a click
             document.getElementById("back-button").click();
         }
         else if (key === "ArrowUp") {
-            // Trigger the button element with a click
             document.getElementById("banana").click();
         }
         if (key === "ArrowLeft") {
-            // Trigger the button element with a click
             document.getElementById("orange").click();
         }
         if (key === "ArrowDown") {
-            // Trigger the button element with a click
             document.getElementById("strawberry").click();
         }
     });
